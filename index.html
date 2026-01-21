@@ -1,0 +1,1121 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>台北士林邸苑｜長期居住的空間主權</title>
+  <meta name="description" content="台北士林邸苑｜以長期居住、空間主權與生活秩序為核心的高端住宅領域。" />
+  <meta name="theme-color" content="#0a0b10" />
+  <style>
+    :root{
+      --bg:#07070a;
+      --ink:#f4f1ea;
+      --muted:rgba(244,241,234,.68);
+      --muted2:rgba(244,241,234,.50);
+      --line:rgba(244,241,234,.12);
+      --line2:rgba(244,241,234,.18);
+      --gold1:#caa66a;
+      --gold2:#f2d7a1;
+      --gold3:#8f6a2e;
+      --obs:#0c0d12;
+      --glass:rgba(10,11,16,.55);
+      --shadow: 0 30px 90px rgba(0,0,0,.55);
+      --shadow2: 0 18px 48px rgba(0,0,0,.45);
+      --radius: 26px;
+      --radius2: 18px;
+      --max: 1180px;
+      --serif: ui-serif, "Iowan Old Style", "Songti TC", "Noto Serif TC", "Times New Roman", serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", Segoe UI, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 420px at 14% 18%, rgba(202,166,106,.18), transparent 60%),
+        radial-gradient(760px 420px at 86% 22%, rgba(242,215,161,.12), transparent 58%),
+        radial-gradient(1200px 560px at 50% 96%, rgba(202,166,106,.10), transparent 64%),
+        linear-gradient(180deg, #06060a 0%, #070712 28%, #06060a 100%);
+      font-family:var(--sans);
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .hairline{height:1px; background:linear-gradient(90deg, transparent, var(--line2), transparent)}
+    .pill{
+      display:inline-flex; gap:10px; align-items:center;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      backdrop-filter: blur(10px);
+      padding:10px 14px;
+      border-radius:999px;
+      color:var(--muted);
+      letter-spacing:.06em;
+      font-size:12px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background:radial-gradient(circle at 30% 30%, var(--gold2), var(--gold3));
+      box-shadow:0 0 20px rgba(242,215,161,.25);
+    }
+
+    /* header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(180deg, rgba(7,7,10,.78), rgba(7,7,10,.30));
+      border-bottom:1px solid rgba(244,241,234,.08);
+      backdrop-filter: blur(16px);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:280px;
+    }
+    .mark{
+      width:34px; height:34px; border-radius:12px;
+      border:1px solid rgba(242,215,161,.22);
+      background:
+        radial-gradient(16px 16px at 30% 28%, rgba(242,215,161,.55), transparent 65%),
+        radial-gradient(24px 24px at 70% 72%, rgba(202,166,106,.35), transparent 65%),
+        linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+    }
+    .mark::after{
+      content:"";
+      position:absolute; inset:-40%;
+      background:conic-gradient(from 180deg, transparent 0 40%, rgba(242,215,161,.20) 50%, transparent 60% 100%);
+      animation:spin 10s linear infinite;
+      opacity:.7;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .brand h1{
+      margin:0;
+      font-family:var(--serif);
+      font-weight:700;
+      letter-spacing:.12em;
+      font-size:14px;
+      text-transform:uppercase;
+    }
+    .brand .sub{
+      margin:2px 0 0 0;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.08em;
+    }
+    nav .links{
+      display:flex; gap:18px; align-items:center;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    nav .links a{
+      padding:10px 10px;
+      border-radius:999px;
+      border:1px solid transparent;
+      transition:all .25s ease;
+    }
+    nav .links a:hover{
+      color:var(--ink);
+      border-color:rgba(242,215,161,.18);
+      background:rgba(255,255,255,.03);
+    }
+    .cta{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(242,215,161,.22);
+      background:
+        radial-gradient(400px 140px at 50% 10%, rgba(242,215,161,.18), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .cta .arrow{
+      width:16px; height:16px;
+      border-radius:50%;
+      border:1px solid rgba(242,215,161,.28);
+      display:grid; place-items:center;
+      color:rgba(242,215,161,.95);
+    }
+
+    /* hero */
+    .hero{
+      position:relative;
+      padding:58px 0 26px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-200px -200px auto -200px; height:620px;
+      background:
+        radial-gradient(1200px 520px at 50% 20%, rgba(242,215,161,.14), transparent 62%),
+        radial-gradient(900px 520px at 20% 30%, rgba(202,166,106,.10), transparent 65%),
+        radial-gradient(1000px 560px at 80% 30%, rgba(202,166,106,.08), transparent 66%);
+      pointer-events:none;
+      filter:saturate(1.05);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .card{
+      border:1px solid rgba(244,241,234,.10);
+      background:
+        radial-gradient(900px 420px at 40% 10%, rgba(242,215,161,.10), transparent 58%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(600px 220px at 15% 20%, rgba(255,255,255,.06), transparent 58%),
+        radial-gradient(700px 320px at 85% 70%, rgba(242,215,161,.05), transparent 60%);
+      pointer-events:none;
+      mix-blend-mode:screen;
+      opacity:.7;
+    }
+    .hero-main{padding:30px 28px 22px}
+    .kicker{
+      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .hero-title{
+      margin:0 0 14px 0;
+      font-family:var(--serif);
+      font-weight:700;
+      letter-spacing:.06em;
+      font-size:44px;
+      line-height:1.08;
+    }
+    .hero-title .g{
+      background:linear-gradient(90deg, var(--gold2), var(--gold1));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.9;
+      letter-spacing:.02em;
+      max-width:60ch;
+    }
+    .hero-actions{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:20px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      border-radius:999px;
+      padding:12px 14px;
+      border:1px solid rgba(244,241,234,.14);
+      background:rgba(255,255,255,.03);
+      color:var(--ink);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      transition:transform .20s ease, border-color .20s ease, background .20s ease;
+    }
+    .btn:hover{transform:translateY(-1px); border-color:rgba(242,215,161,.22); background:rgba(255,255,255,.05)}
+    .btn.primary{
+      border-color:rgba(242,215,161,.25);
+      background:
+        radial-gradient(420px 120px at 50% 0%, rgba(242,215,161,.22), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+    }
+    .btn svg{opacity:.88}
+    .hero-meta{
+      display:flex; gap:16px; flex-wrap:wrap;
+      margin-top:18px;
+      padding-top:16px;
+      border-top:1px solid rgba(244,241,234,.10);
+      color:var(--muted2);
+      font-size:12px;
+      letter-spacing:.06em;
+    }
+    .hero-meta .item{display:flex; gap:10px; align-items:flex-start}
+    .hero-meta .label{color:rgba(242,215,161,.85)}
+    .hero-side{padding:22px 22px 18px}
+    .side-title{
+      font-family:var(--serif);
+      margin:0 0 12px 0;
+      letter-spacing:.10em;
+      font-size:14px;
+      text-transform:uppercase;
+      color:rgba(242,215,161,.92);
+    }
+    .side-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    .tile{
+      border:1px solid rgba(244,241,234,.10);
+      border-radius:18px;
+      padding:14px 14px;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+      box-shadow:var(--shadow2);
+      position:relative;
+      overflow:hidden;
+    }
+    .tile::before{
+      content:"";
+      position:absolute; inset:-60px -60px auto auto;
+      width:200px; height:200px;
+      background:radial-gradient(circle at 30% 30%, rgba(242,215,161,.20), transparent 65%);
+      transform:rotate(12deg);
+      opacity:.65;
+    }
+    .tile h3{
+      margin:0 0 6px 0;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(244,241,234,.90);
+    }
+    .tile p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.8;
+      letter-spacing:.02em;
+    }
+    .numrow{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .stat{
+      border:1px solid rgba(244,241,234,.10);
+      border-radius:18px;
+      padding:12px 12px;
+      background:rgba(255,255,255,.02);
+    }
+    .stat .k{
+      color:rgba(242,215,161,.88);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:10px;
+    }
+    .stat .v{
+      margin-top:6px;
+      font-family:var(--serif);
+      font-size:18px;
+      letter-spacing:.06em;
+      color:rgba(244,241,234,.96);
+    }
+    .stat .s{
+      margin-top:4px;
+      color:var(--muted2);
+      font-size:12px;
+      letter-spacing:.04em;
+      line-height:1.5;
+    }
+
+    /* sections */
+    section{padding:34px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:16px; flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .h2{
+      margin:0;
+      font-family:var(--serif);
+      font-size:22px;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+    .subhead{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+      max-width:68ch;
+      letter-spacing:.02em;
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:14px;
+    }
+    .panel{
+      border:1px solid rgba(244,241,234,.10);
+      border-radius:24px;
+      background:
+        radial-gradient(560px 240px at 25% 15%, rgba(242,215,161,.08), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.012));
+      box-shadow:var(--shadow2);
+      padding:18px 18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .panel .cap{
+      display:flex; align-items:center; gap:10px;
+      color:rgba(242,215,161,.90);
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .panel .cap .ring{
+      width:10px; height:10px; border-radius:50%;
+      border:1px solid rgba(242,215,161,.40);
+      box-shadow:0 0 20px rgba(242,215,161,.15);
+      background:radial-gradient(circle at 30% 30%, rgba(242,215,161,.60), rgba(202,166,106,.10));
+    }
+    .panel h3{
+      margin:0 0 10px 0;
+      font-family:var(--serif);
+      font-size:18px;
+      letter-spacing:.06em;
+      line-height:1.2;
+    }
+    .panel p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.85;
+      letter-spacing:.02em;
+    }
+    .specs{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .spec-left{padding:20px}
+    .spec-right{padding:20px}
+    .spec-left .quote{
+      margin:0;
+      font-family:var(--serif);
+      font-size:20px;
+      letter-spacing:.04em;
+      line-height:1.6;
+      color:rgba(244,241,234,.94);
+    }
+    .spec-left .quote b{
+      color:rgba(242,215,161,.94);
+      font-weight:700;
+    }
+    .spec-left .note{
+      margin:14px 0 0 0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:13px;
+    }
+    .table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border:1px solid rgba(244,241,234,.10);
+      border-radius:18px;
+      background:rgba(255,255,255,.02);
+    }
+    .table th, .table td{
+      padding:12px 12px;
+      border-bottom:1px solid rgba(244,241,234,.08);
+      font-size:12px;
+      line-height:1.5;
+    }
+    .table th{
+      text-align:left;
+      color:rgba(242,215,161,.88);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:600;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+    }
+    .table td{color:var(--muted)}
+    .table tr:last-child td{border-bottom:none}
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(244,241,234,.12);
+      background:rgba(255,255,255,.02);
+      font-size:11px;
+      color:rgba(244,241,234,.86);
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    /* gallery-ish */
+    .gallery{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+    }
+    .canvas{
+      position:relative;
+      border:1px solid rgba(244,241,234,.10);
+      border-radius:26px;
+      background:
+        radial-gradient(700px 300px at 25% 25%, rgba(242,215,161,.10), transparent 60%),
+        radial-gradient(700px 360px at 78% 72%, rgba(202,166,106,.08), transparent 62%),
+        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.012));
+      box-shadow:var(--shadow);
+      min-height:290px;
+      overflow:hidden;
+    }
+    .stroke{
+      position:absolute; inset:-40%;
+      background:
+        conic-gradient(from 220deg, transparent 0 45%, rgba(242,215,161,.18) 52%, transparent 58% 100%);
+      animation:spin 18s linear infinite;
+      opacity:.55;
+      filter:blur(0px);
+    }
+    .gridlines{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(rgba(244,241,234,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244,241,234,.06) 1px, transparent 1px);
+      background-size:44px 44px;
+      opacity:.18;
+      mask-image: radial-gradient(circle at 35% 35%, black 0 55%, transparent 80%);
+      pointer-events:none;
+    }
+    .sig{
+      position:absolute;
+      left:18px; bottom:16px;
+      display:flex; flex-direction:column; gap:6px;
+      padding:14px 14px;
+      border-radius:18px;
+      border:1px solid rgba(244,241,234,.10);
+      background:rgba(7,7,10,.42);
+      backdrop-filter: blur(10px);
+      max-width:70%;
+    }
+    .sig .t{
+      font-family:var(--serif);
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:rgba(242,215,161,.92);
+    }
+    .sig .d{
+      color:rgba(244,241,234,.86);
+      font-size:13px;
+      line-height:1.75;
+    }
+    .sig .mini{
+      color:var(--muted2);
+      font-size:12px;
+      letter-spacing:.04em;
+    }
+    .stack{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .list li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius:18px;
+      border:1px solid rgba(244,241,234,.10);
+      background:rgba(255,255,255,.02);
+    }
+    .list .icon{
+      width:28px; height:28px; border-radius:12px;
+      display:grid; place-items:center;
+      border:1px solid rgba(242,215,161,.22);
+      background:radial-gradient(circle at 30% 30%, rgba(242,215,161,.22), rgba(255,255,255,.02));
+      flex:0 0 auto;
+      margin-top:2px;
+    }
+    .list .txt{flex:1}
+    .list .txt .k{
+      color:rgba(242,215,161,.92);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:11px;
+      margin:0 0 6px 0;
+    }
+    .list .txt .v{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    /* footer */
+    footer{
+      padding:34px 0 44px;
+      color:var(--muted2);
+    }
+    .foot{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap:16px; flex-wrap:wrap;
+      padding-top:18px;
+    }
+    .foot strong{
+      color:rgba(244,241,234,.92);
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      font-family:var(--serif);
+      font-weight:700;
+    }
+    .mono{
+      font-family:var(--mono);
+      letter-spacing:.02em;
+      color:rgba(244,241,234,.72);
+      font-size:12px;
+      line-height:1.6;
+    }
+    .foot .right{
+      display:flex; flex-direction:column; gap:8px; align-items:flex-end;
+      text-align:right;
+    }
+
+    /* responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .specs{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      nav .links{display:none}
+      .brand{min-width:auto}
+      .hero-title{font-size:38px}
+    }
+    @media (max-width: 520px){
+      .hero-title{font-size:32px}
+      .hero-main{padding:24px 18px 18px}
+      .hero-side{padding:18px 18px 16px}
+      .wrap{padding:0 16px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>台北士林邸苑</h1>
+            <div class="sub">長期居住 · 空間主權 · 生活秩序</div>
+          </div>
+        </div>
+
+        <nav class="links" aria-label="Site">
+          <a href="#about">定位</a>
+          <a href="#district">區域</a>
+          <a href="#planning">規劃</a>
+          <a href="#residence">住宅</a>
+          <a href="#values">價格</a>
+          <a href="#life">生活</a>
+        </nav>
+
+        <a class="cta" href="#visit" aria-label="Request a visit">
+          預約鑑賞
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="card">
+            <div class="hero-main">
+              <div class="kicker">
+                <span class="pill"><span class="dot"></span> Shilin District · Taipei</span>
+                <span class="pill"><span class="dot"></span> 低密度街廓 · 綠意環境</span>
+                <span class="pill"><span class="dot"></span> 600㎡ 起 · 大尺度住宅</span>
+              </div>
+
+              <h2 class="hero-title">
+                不是被城市追趕的住所，<br />
+                而是能<strong class="g">承載時間</strong>的領域。
+              </h2>
+
+              <p class="lead">
+                台北士林邸苑，以長期居住為前提，從空間主權、家庭節奏到生活秩序，建立一個不依賴短暫視覺效果、也不迎合話題熱度的高端住宅尺度。這裡的奢華不喧嘩，而在於克制、比例、留白與時間累積出的質感。
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn primary" href="#planning">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M4 12h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M14 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  了解規劃語彙
+                </a>
+                <a class="btn" href="#residence">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  </svg>
+                  探索住宅尺度
+                </a>
+              </div>
+
+              <div class="hero-meta">
+                <div class="item">
+                  <span class="label">生活半徑</span>
+                  <span>士林靜巷住宅帶 · 綠意低密度</span>
+                </div>
+                <div class="item">
+                  <span class="label">核心主張</span>
+                  <span>適度留白 · 棟距視野 · 動線層次</span>
+                </div>
+                <div class="item">
+                  <span class="label">資產邏輯</span>
+                  <span>長期稀缺性 · 穩定性優先</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="hero-side">
+              <h3 class="side-title">項目概覽</h3>
+              <div class="side-grid">
+                <div class="tile">
+                  <h3>居住本質</h3>
+                  <p>以家庭與時間為尺度，強調空間主導權與日常秩序，不以短期市場波動定義價值。</p>
+                </div>
+                <div class="tile">
+                  <h3>設計立場</h3>
+                  <p>克制、內斂、比例嚴謹；以材質與光影完成氣質，而非依賴造型吸睛。</p>
+                </div>
+
+                <div class="numrow">
+                  <div class="stat">
+                    <div class="k">Unit Size</div>
+                    <div class="v">600㎡ 起</div>
+                    <div class="s">大尺度公共區域與私領域分界清晰</div>
+                  </div>
+                  <div class="stat">
+                    <div class="k">Pricing</div>
+                    <div class="v">200–450萬</div>
+                    <div class="s">NTD / m² · 對應稀缺性與尺度</div>
+                  </div>
+                </div>
+
+                <div class="tile">
+                  <h3>維護與私域</h3>
+                  <p>採低干擾管理節奏與分層動線，維持住戶長期生活的穩定性與安靜質地。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="hairline"></div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">定位</h2>
+            <p class="subhead">
+              台北士林邸苑是一處以長期居住為唯一前提的住宅領域：空間不為展示而存在，而是為生活的節奏、家庭的互動、時間的推移預留餘裕。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Long-term Residency Domain</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Principle</div>
+            <h3>適度留白</h3>
+            <p>在量體配置與室內尺度上保留呼吸感，讓居住者自然感到從容，而非被最大化利用推擠。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Standard</div>
+            <h3>空間主權</h3>
+            <p>動線清晰、分界明確，公共生活與私人休憩各自完整，住戶在共享與獨處之間保持平衡。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Tempo</div>
+            <h3>秩序與節奏</h3>
+            <p>生活不被時間追趕，住宅回歸容器本質：承載家庭、生活、時間本身，而非僅僅是一個地址。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="district">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">區域特質</h2>
+            <p class="subhead">
+              士林區擁有台北少數難以複製的居住氣質：自然綠意、低密度街廓與成熟機能之間取得平衡，並在城市變化中仍維持穩定純粹。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Low-density Quiet Residential Belt</div>
+        </div>
+
+        <div class="specs">
+          <div class="panel spec-left">
+            <p class="quote">
+              不是熱鬧的中心，而是能讓人把生活放回自己手裡的地方。<br />
+              <b>街道節制</b>、<b>開發密度低</b>、<b>生活氛圍穩定</b>。
+            </p>
+            <p class="note">
+              台北士林邸苑座落於士林內斂安靜的住宅範圍，周邊以成熟街廓與綠意輪廓形成視覺緩衝；日常所需的機能距離恰到好處，不打擾，也不缺席。這樣的條件帶來長期稀缺性，使其在時間推移中仍維持核心價值。
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <span class="tag">綠意視野</span>
+              <span class="tag">低密度街廓</span>
+              <span class="tag">成熟機能</span>
+              <span class="tag">生活穩定性</span>
+            </div>
+          </div>
+
+          <div class="panel spec-right">
+            <table class="table" aria-label="District Profile">
+              <thead>
+                <tr>
+                  <th>維度</th>
+                  <th>描述</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>居住氛圍</td>
+                  <td>靜巷尺度、低噪音干擾，適合長時間生活與家庭節奏。</td>
+                </tr>
+                <tr>
+                  <td>街廓結構</td>
+                  <td>棟距與視野條件較佳，視線不被密集量體切割。</td>
+                </tr>
+                <tr>
+                  <td>綠意條件</td>
+                  <td>以植栽與開闊界面形成緩衝，提升日常的安定感。</td>
+                </tr>
+                <tr>
+                  <td>稀缺性</td>
+                  <td>居住氣質難以複製，時間越久越明顯，價值不靠話題支撐。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="planning">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">整體規劃</h2>
+            <p class="subhead">
+              規劃不以最大化使用量為目標，而以「適度留白」作為關鍵原則。棟距、視野與動線層次共同服務日常生活，形成長期居住所需的穩定節奏。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Spatial Hierarchy · Clear Circulation</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Massing</div>
+            <h3>棟距與視野</h3>
+            <p>量體配置保留視線的寬度與深度，讓空間的從容成為日常的一部分，而非奢侈的偶然。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Circulation</div>
+            <h3>動線層次</h3>
+            <p>以分層動線降低干擾，公共與私人活動自然分界；生活流線清楚，長期居住更顯輕鬆。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Lifestyle</div>
+            <h3>生活邏輯優先</h3>
+            <p>家庭互動、獨處需求、節奏穩定性皆被視為核心條件，空間為生活服務，而非被形式綁架。</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="panel">
+          <div class="cap"><span class="ring"></span> Architectural Language</div>
+          <h3>建築語彙：克制而內斂</h3>
+          <p>
+            外觀線條簡潔、比例嚴謹，不依賴浮誇造型吸引目光；以材質、光影與結構的秩序，呈現耐看的長期質感。奢華並非即時性的感官刺激，而是一種隨時間累積而愈發清晰的氣質。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="residence">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">住宅空間</h2>
+            <p class="subhead">
+              每戶以完整居住體驗為前提：尺度充裕、動線自然，公共生活區域與私人休憩空間各自獨立卻不割裂，讓不同家庭結構與人生階段的轉變都能被容納。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Complete Home Experience</div>
+        </div>
+
+        <div class="gallery">
+          <div class="canvas" aria-label="Atmosphere canvas">
+            <div class="stroke" aria-hidden="true"></div>
+            <div class="gridlines" aria-hidden="true"></div>
+            <div class="sig">
+              <div class="t">Taipei Shilin Residence Domain</div>
+              <div class="d">大尺度所帶來的不是面積數字，而是生活節奏的放緩、空間主導權的回歸，以及長期居住所需的彈性與餘裕。</div>
+              <div class="mini">尺度 · 留白 · 光影 · 秩序</div>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div class="panel">
+              <div class="cap"><span class="ring"></span> Spatial Scale</div>
+              <h3>600㎡ 起：一種生活選擇</h3>
+              <p>寬廣的空間條件，使住宅能因應家庭成員與生活型態的改變，而不需要頻繁妥協。每一段人生都有自己的節奏，而空間始終保持從容。</p>
+            </div>
+
+            <ul class="list" aria-label="Residence Highlights">
+              <li>
+                <div class="icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2l9 7v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9l9-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <path d="M9 22v-7h6v7" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="txt">
+                  <div class="k">Public / Private</div>
+                  <p class="v">公共生活與私人休憩區域分界清楚，同住者共享而不互相侵入。</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 7h16M7 4v16M20 17H4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="txt">
+                  <div class="k">Circulation</div>
+                  <p class="v">動線安排清楚自然，日常起居與儀式感場景皆能成立。</p>
+                </div>
+              </li>
+              <li>
+                <div class="icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 21H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5l2-2h2l2 2h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <path d="M12 11a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" stroke="currentColor" stroke-width="1.6"/>
+                  </svg>
+                </div>
+                <div class="txt">
+                  <div class="k">Light & Material</div>
+                  <p class="v">以光影與材質秩序塑造耐看質地，越久越清晰，越住越安定。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="values">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">價格定位</h2>
+            <p class="subhead">
+              單價 200–450 萬 NTD / m² 的區間，反映地段稀缺性、建築尺度與住宅定位。價格不以短期波動為依據，而是對應長期居住價值與資產穩定性。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Long-term Value · Asset Stability</div>
+        </div>
+
+        <div class="specs">
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Value Logic</div>
+            <h3>稀缺性是時間的結果</h3>
+            <p>
+              士林的居住氣質與低密度住宅帶，讓「可長住」成為真正稀缺。邸苑的價值建立於可被長時間驗證的條件：街廓、尺度、留白與生活秩序，而非話題或短暫熱度。
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <span class="tag">稀缺地段</span>
+              <span class="tag">尺度溢價</span>
+              <span class="tag">長期穩定性</span>
+              <span class="tag">耐看建築語彙</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <table class="table" aria-label="Pricing Snapshot">
+              <thead>
+                <tr>
+                  <th>項目</th>
+                  <th>內容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>單價區間</td>
+                  <td>200–450 萬 NTD / m²</td>
+                </tr>
+                <tr>
+                  <td>尺度基準</td>
+                  <td>每戶 600㎡ 起 · 以長住需求建立完整空間分界</td>
+                </tr>
+                <tr>
+                  <td>定位</td>
+                  <td>極少數對居住品質具清晰標準之族群</td>
+                </tr>
+                <tr>
+                  <td>資產特性</td>
+                  <td>以穩定性與可驗證條件為核心，弱化短期波動干擾</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="life">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">生活狀態</h2>
+            <p class="subhead">
+              在台北士林邸苑，生活回歸秩序與節奏本身。住宅不是展示品，而是承載家庭、生活與時間的容器；當空間足夠安靜，日常便能恢復清晰。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Quiet Luxury · Daily Order</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Daily Rhythm</div>
+            <h3>不被追趕的日常</h3>
+            <p>時間感被拉回到可掌握的尺度：起居、用餐、閱讀、交流，各自有位置，也各自有餘裕。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Family</div>
+            <h3>共享與獨處的平衡</h3>
+            <p>同一屋簷下，不必相互消耗。空間讓家庭更靠近，也讓個體更完整。</p>
+          </div>
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Continuity</div>
+            <h3>為長久而存在</h3>
+            <p>選擇長久而非短暫：空間、生活與價值，得以隨時間一同延續，越住越明白。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="h2">鑑賞資訊</h2>
+            <p class="subhead">
+              僅以長期居住需求為前提的鑑賞流程，採分時段安排，確保安靜與完整體驗。以生活尺度理解空間，而非以熱鬧定義價值。
+            </p>
+          </div>
+          <div class="pill"><span class="dot"></span> Private Appointment · Time Slot Based</div>
+        </div>
+
+        <div class="specs">
+          <div class="panel">
+            <div class="cap"><span class="ring"></span> Appointment</div>
+            <h3>預約鑑賞（分時段）</h3>
+            <p>
+              鑑賞時段以生活節奏安排：上午段適合感受光影與留白；午後段更適合完整走讀動線與空間分界；夜間段以靜謐氛圍呈現長住的安定性。
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <span class="tag">Morning Light</span>
+              <span class="tag">Afternoon Walkthrough</span>
+              <span class="tag">Evening Quiet</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <table class="table" aria-label="Visit Details">
+              <thead>
+                <tr>
+                  <th>項目</th>
+                  <th>內容</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>鑑賞形式</td>
+                  <td>一組一時段 · 全程安靜動線</td>
+                </tr>
+                <tr>
+                  <td>重點內容</td>
+                  <td>棟距視野、動線層次、公共/私域分界、尺度體感</td>
+                </tr>
+                <tr>
+                  <td>建議時長</td>
+                  <td>60–90 分鐘（依家庭需求調整）</td>
+                </tr>
+                <tr>
+                  <td>資料提供</td>
+                  <td>規劃摘要、尺度配置、單價區間、生活半徑摘要</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="hairline"></div>
+    </div>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot">
+          <div>
+            <strong>台北士林邸苑</strong><br />
+            <span class="mono">Long-term Residency Domain · Shilin District · Taipei</span><br />
+            <span class="mono">Space Sovereignty · Lifestyle Order · Enduring Value</span>
+          </div>
+          <div class="right">
+            <div class="mono">© Taipei Shilin Residence Domain</div>
+            <div class="mono">Curated for a few · Built for the long run</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
